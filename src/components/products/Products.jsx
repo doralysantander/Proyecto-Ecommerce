@@ -1,32 +1,25 @@
 import React from 'react'
-import apple from '../../assets/carrusel/feijoalogo.jpg'
-import feijoa from '../../assets/carrusel/apple-3.jpg'
-import avocado from '../../assets/carrusel/apple-4.jpg'
-
+import feijoa from '../../assets/products/feijoas/feijoalogo.png'
+import apple from '../../assets/products/apples/applelogo.png' 
 
 
 const Products = () => {
 
   return (
-    <div>
-     <img
+    <div className="w-screen flex h-1/5  justify-evenly">
+     <img 
             src={apple}
             alt="apple"
-            className=""
+            className="w-1/4 h-1/4 md:w-2/12 h-2/12 xl:w-2/12 h-2/12"
+           
         />
-
       <img
             src={feijoa}
             alt="feijoa"
-            className=""
+            className="w-1/4 h-1/4 md:w-2/12 h-2/12 xl:w-2/12 h-2/12"
+           
         />
-        <img
-            src={avocado}
-            alt="avocado"
-            className=""
-        />
-
-
+       
     </div>
   )
 }
