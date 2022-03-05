@@ -11,7 +11,6 @@ import Productslist from './components/products/Productslist';
 function App() {
   return (
     <>
-    
      <Navbar />
      <Carrusel/>
     <Products />

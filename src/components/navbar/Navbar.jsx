@@ -37,7 +37,7 @@ const Navbar = () => {
 
   return (
     <> 
-    <div className = "w-screen  bg-green-900 flex justify-around items-center md:h-1/3 xl:h-1/3" >
+    <div className = "w-screen  bg-green-900 z-50 sticky top-0 flex justify-around items-center md:h-1/3 xl:h-1/3" >
     <FontAwesomeIcon icon={faBars} className="text-stone-50 h-8 w-8 md:h-16 w-16 "  //icono menu hamburgesa
      onClick={()=>setshowMenu(!showMenu)}//true
     />
