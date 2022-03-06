@@ -1,5 +1,6 @@
 import React from 'react'
-import Card from '././components/products/Card';
+//import Card from '././components/products/Card';
+import Card from "./Card";
 //Apples
 import trayapple1 from '../../assets/products/apples/thre-apples.png' 
 import trayapple2 from '../../assets/products/apples/six-apples.png' 
@@ -8,6 +9,7 @@ import trayapple4 from '../../assets/products/apples/eight-apples.png'
 import trayapple5 from '../../assets/products/apples/five-apples.png'
 import trayapple6 from '../../assets/products/apples/five-apples-diferent.png' 
 import trayapple7 from '../../assets/products/apples/four-apples.png'
+
 
 //Feijoas 
 import trayfeijoas1 from '../../assets/products/feijoas/eight-feijoas.png'
@@ -106,6 +108,9 @@ const Productslist = () => {
                           image:trayfeijoas5,
                           price: 5000
                           }
+
+                         
+                  
               
       
     ]
