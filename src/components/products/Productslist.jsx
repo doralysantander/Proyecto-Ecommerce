@@ -2,7 +2,7 @@ import React from 'react'
 //import Card from '././components/products/Card';
 import Card from "./Card";
 //Apples
-import trayapple1 from '../../assets/products/apples/thre-apples.png' 
+//import trayapple1 from '../../assets/products/apples/thre-apples.png' 
 import trayapple2 from '../../assets/products/apples/six-apples.png' 
 import trayapple3 from '../../assets/products/apples/four-apples.png'
 import trayapple4 from '../../assets/products/apples/eight-apples.png' 
@@ -22,42 +22,37 @@ import trayfeijoas5 from '../../assets/products/feijoas/four-feijoas.png'
 
 const Productslist = () => {
     const apples =[
+       
         {
-            id:1,
-            description:"Manzana orgánica del huerto a su mesa",
-            image:trayapple1,
-            price: 5000
-        },
-        {
-          id:2,
+          id:1,
           description:"Manzana orgánica del huerto a su mesa",
           image:trayapple2,
           price: 5000
         },
 
         {
-        id:3,
+        id:2,
         description:"Manzana orgánica del huerto a su mesa",
         image:trayapple3,
         price: 5.000
         },
 
           {
-          id:4,
+          id:3,
           description:"Manzana orgánica del huerto a su mesa",
           image:trayapple4,
           price: 5000
           },
 
           {
-          id:5,
+          id:4,
           description:"Manzana orgánica del huerto a su mesa",
           image:trayapple5,
           price: 5000
           },
 
           {
-            id:6,
+            id:5,
             description:"Manzana orgánica del huerto a su mesa",
             image:trayapple6,
             price: 5000
@@ -70,42 +65,42 @@ const Productslist = () => {
               },
 
               {
-                id:6,
+                id:7,
                 description:"Feijoa orgánica de alta calidad",
                 image:trayfeijoas1,
                 price: 5000
                 },
 
                 {
-                  id:6,
+                  id:8,
                   description:"Feijoa orgánica de alta calidad",
                   image:trayfeijoas2,
                   price: 5000
                   },
 
                   {
-                    id:6,
+                    id:9,
                     description:"Feijoa orgánica de alta calidad",
                     image:trayfeijoas3,
                     price: 5000
                     },
 
                     {
-                      id:6,
+                      id:10,
                       description:"Feijoa orgánica de alta calidad",
                       image:trayfeijoas4,
                       price: 5000
                       },
 
                       {
-                        id:6,
+                        id:11,
                         description:"Feijoa orgánica de alta calidad",
                         image:trayfeijoas4,
                         price: 5000
                         },
 
                         {
-                          id:6,
+                          id:12,
                           description:"Feijoa orgánica de alta calidad",
                           image:trayfeijoas5,
                           price: 5000

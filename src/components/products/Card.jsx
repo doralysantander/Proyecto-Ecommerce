@@ -12,7 +12,7 @@ const Card = (props) => {
           <button className="bg-green-900 px-1.5 py-1.5 w-8 h-8 text-center rounded-2xl text-zinc-100 font-bold">
             +
           </button >
-          <input type="text" size="1" className=" border border-green-700 px-1.5 py-1.5 text-zinc-900 font-bold" />
+          <input type="text" size="1" onkeydown="return false" className=" border border-green-700 px-1.5 py-1.5 text-zinc-900 font-bold" />
           <button className="bg-green-900 px-2 py-2 w-8 h-8 text-center rounded-2xl text-zinc-100 font-bold">
             -
           </button>
@@ -54,7 +54,7 @@ const Card = (props) => {
         
 
     </div>
-}
-*/
+}*/
+
 export default Card
 
