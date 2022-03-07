@@ -5,6 +5,8 @@ import Footer from './components/footer/Footer';
 import Carrusel from './components/carrusel/Carrusel';
 import Products from './components/products/Products';
 import Productslist from './components/products/Productslist';
+//import Apple from './components/products/Apple';
+
 //import Carousel from 'react-elastic-carousel';
 //import {Route} from 'react-router-dom';
 
@@ -14,7 +16,7 @@ function App() {
      <Navbar />
      <Carrusel/>
     <Products />
-    <Productslist />
+     <Productslist />
      <Footer />
     </>
   );

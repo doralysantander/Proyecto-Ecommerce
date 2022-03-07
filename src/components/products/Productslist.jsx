@@ -9,6 +9,8 @@ import trayapple4 from '../../assets/products/apples/eight-apples.png'
 import trayapple5 from '../../assets/products/apples/five-apples.png'
 import trayapple6 from '../../assets/products/apples/five-apples-diferent.png' 
 import trayapple7 from '../../assets/products/apples/four-apples.png'
+//import trayapple8 from '../../assets/products/apples/aaa.png'
+
 
 
 //Feijoas 
@@ -109,16 +111,19 @@ const Productslist = () => {
                           price: 5000
                           }
 
-                         
+                          
+         
                   
               
       
     ]
   return (
-    <div>
+    <div className="w-full h-5/6  gap-4 grid sm:grid-cols-1 justify-center md:grid-cols-2 lg:grid-cols-3 rounded-lg">
+
       {
          apples.map(apple=>(<Card description={apple.description} image={apple.image} price={apple.price}></Card>))
       }
+     
      
     </div>
   )
