@@ -8,17 +8,20 @@ import Productslist from './components/products/Productslist';
 //import Apple from './components/products/Apple';
 
 //import Carousel from 'react-elastic-carousel';
-//import {Route} from 'react-router-dom';
+//import {Route as Router} from 'react-router-dom';
 
 function App() {
   return (
     <>
+  
      <Navbar />
      <Carrusel/>
     <Products />
      <Productslist />
      <Footer />
+    
     </>
+    
   );
 }
 

@@ -30,11 +30,13 @@ className="sm:w-12 h-12 md:w-1/4 h-1/4 xl:w-1/6 h-1/6"
 }
 function slideMenu() {
     return (
-      <div>
-          <a href="/">Inicio</a>
-          <a href="#">Quienes somos</a>
-          <a href="#">Productos</a>
-          <a href="#">Contacto</a>
+      <div className="bg-green-900 bottom-60">
+        <ul>
+          <li className="menu-list-item py-2 hover:bg-slate-50"><a href="/">Inicio</a></li>
+          <li className="menu-list-item py-2 hover:bg-slate-50"><a href="#">Quienes somos</a></li>
+          <li className="menu-list-item py-2 hover:bg-slate-50"><a href="#">Productos</a></li>
+          <li className="menu-list-item py-2 hover:bg-slate-50"><a href="#">Contacto</a></li>
+          </ul>
 
   
       </div>
