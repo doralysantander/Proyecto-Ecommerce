@@ -6,19 +6,19 @@ import { NavLink } from 'react-router-dom'
 
  export default function Navbar () {
 const [open, setOpen] = useState(false)
-const showMenu = () => {//showSideMenu
-    (open) ? setOpen(false) : setOpen(true)
-  }
+
+
 return (
 <>
 <div className="w-full p-7 bg-green-900 z-50 sticky top-0 flex justify-around items-center md:h-1/3 xl:h-1/3" >
 <FontAwesomeIcon icon={faBars} className="text-stone-50 h-8 w-8 md:h-16 w-16 " //icono menu hamburgesa
-onClick={() =>(open) ? slideMenu() : ''} 
+onClick={() =>(setOpen(!open))} 
 />
+{open ? slideMenu():''}
 <img
 src={logo}
 alt="logo"
-className="sm:w-14 h-14 md:w-1/4 h-1/4 xl:w-1/6 h-1/6"
+className="sm:w-12 h-12 md:w-1/4 h-1/4 xl:w-1/6 h-1/6"
 />
 <FontAwesomeIcon icon={faCartPlus} className="text-stone-50 h-8 w-8 md:h-16 w-16" />{/*icono carro compras */}
 
@@ -35,9 +35,8 @@ function slideMenu() {
           <a href="#">Quienes somos</a>
           <a href="#">Productos</a>
           <a href="#">Contacto</a>
+
   
-  
-    
       </div>
     )
   }
