@@ -1,8 +1,7 @@
 
 import React, { Fragment, useState } from 'react'
 import Card from "./Card";
-
-//import { TYPES } from "./ShoppingAction"
+import Cart from "./Cart";
 //Apples
 //import trayapple1 from '../../assets/products/apples/thre-apples.png' 
 import trayapple2 from '../../assets/products/apples/six-apples.png'
@@ -12,7 +11,6 @@ import trayapple5 from '../../assets/products/apples/five-apples.png'
 import trayapple6 from '../../assets/products/apples/five-apples-diferent.png'
 import trayapple7 from '../../assets/products/apples/four-apples.png'
 //import trayapple8 from '../../assets/products/apples/aaa.png'
-
 //Feijoas 
 import trayfeijoas1 from '../../assets/products/feijoas/eight-feijoas.png'
 import trayfeijoas2 from '../../assets/products/feijoas/eleven-feijoas.png'
@@ -137,6 +135,8 @@ setCart={setCart} //Estado carro
 products={products}>{/*listado de productos */}
 </Card>))
 };
+{/*pasar props del padre a cart */}
+<Cart  cart={cart}/>
 
 </div>
 </Fragment>
