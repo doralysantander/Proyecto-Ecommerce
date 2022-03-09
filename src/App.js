@@ -14,11 +14,19 @@ import {BrowserRouter, Routes, Route} from 'react-router-dom';
 function App() {
   return (
     <>
-  <Navbar />
-  <Carrusel/>
-  <Products />
-  <Productslist />
-  <Footer />
+    
+    <BrowserRouter>
+    <Navbar/>
+    <Routes>
+      
+      <Route path="/carrusel" element={<Carrusel/>}/>
+      <Route path="/productos" element={<Products/>}/>
+      <Route path="/lista-productos" element={<Productslist/>}/>
+  
+    </Routes>
+    <Footer/>
+    </BrowserRouter>
+    
     </>
     
   );

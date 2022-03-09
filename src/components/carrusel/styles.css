@@ -23,7 +23,7 @@
   
   .rec-carousel-item:focus {
     outline: none;
-    box-shadow: inset 0 0 1px 0px violet;
+    box-shadow: inset 0 0 1px 0px green;
 
 
   }

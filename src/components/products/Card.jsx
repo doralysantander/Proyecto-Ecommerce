@@ -15,8 +15,9 @@ const Card = ({ product, cart, setCart, products }) => {
   const delProduct = (id) => {
     //FILTRAR LO que eat dentro del carro
     //todos los productos - el que presione clic en eliminar
-    const products = cart.filter((product) => product.id !== id);
+    let products = cart.filter((product) => product.id !== id);
     setCart(products);//modificar esl estado car
+    console.log(products)
   };
   return (
     <div>
@@ -28,45 +29,45 @@ const Card = ({ product, cart, setCart, products }) => {
       <p>{description}</p>
       <span>valor: ${price} Libra</span>
 
-      {products ? ( 
+      {products ? (
 
-      <div className="flex gap-y-1 gap-x-1">
-        <button className="bg-green-900 px-1.5 py-1.5 w-8 h-8 text-center rounded-2xl text-zinc-100 font-bold">
-          +
-        </button>
-        <input
-          type="text"
-          size="1"
-          className=" border border-green-700 px-1.5 py-1.5 text-zinc-900 font-bold"
-        />
-        <button className="bg-green-900 px-2 py-2 w-8 h-8 text-center rounded-2xl text-zinc-100 font-bold">
-          -
-        </button>
-        <button
-          type="button"
-          className="bg-green-900 px-2 py-2 rounded-md text-zinc-100 font-bold"
-          onClick={() => addProduct(id)}
-        >
-          Comprar
-        </button>
-      </div>
-      ):(
-      <div className="flex gap-y-1 gap-x-1">
-        <button
-          type="button"
-          className="bg-green-900 px-2 py-2 rounded-md text-zinc-100 font-bold"
-          onClick={() => delProduct(id)}
-        >
-         Confirmar
-        </button>
-        <button
-          type="button"
-          className="bg-green-900 px-2 py-2 rounded-md text-zinc-100 font-bold"
-          onClick={() => delProduct(id)}
-        >
-         Eliminar
-        </button>
-      </div>
+        <div className="flex gap-y-1 gap-x-1">
+          <button className="bg-green-900 px-1.5 py-1.5 w-8 h-8 text-center rounded-2xl text-zinc-100 font-bold">
+            +
+          </button>
+          <input
+            type="text"
+            size="1"
+            className=" border border-green-700 px-1.5 py-1.5 text-zinc-900 font-bold"
+          />
+          <button className="bg-green-900 px-2 py-2 w-8 h-8 text-center rounded-2xl text-zinc-100 font-bold">
+            -
+          </button>
+          <button
+            type="button"
+            className="bg-green-900 px-2 py-2 rounded-md text-zinc-100 font-bold"
+            onClick={() => addProduct(id)}
+          >
+            Comprar
+          </button>
+        </div>
+      ) : (
+        <div className="flex gap-y-1 gap-x-1">
+          <button
+            type="button"
+            className="bg-green-900 px-2 py-2 rounded-md text-zinc-100 font-bold"
+          //onClick={() => delProduct(id)}
+          >
+            Confirmar
+          </button>
+          <button
+            type="button"
+            className="bg-green-900 px-2 py-2 rounded-md text-zinc-100 font-bold"
+            onClick={() => delProduct(id)}
+          >
+            Eliminar
+          </button>
+        </div>
       )
       }
     </div>

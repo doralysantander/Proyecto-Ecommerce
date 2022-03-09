@@ -136,7 +136,8 @@ products={products}>{/*listado de productos */}
 </Card>))
 };
 {/*pasar props del padre a cart */}
-<Cart  cart={cart}/>
+<Cart  setCart={setCart} cart={cart}/>
+
 
 </div>
 </Fragment>
