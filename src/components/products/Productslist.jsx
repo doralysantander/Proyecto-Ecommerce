@@ -117,7 +117,6 @@ price: 5000,
 category:"cat-feijoa"
 }
 
-
 ])
 
 const [cart, setCart] = useState([])
