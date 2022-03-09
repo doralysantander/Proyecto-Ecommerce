@@ -35,8 +35,8 @@ className="sm:w-24 h-24 md:w-1/4 h-1/4 xl:w-1/6 h-1/6"
 }
 function slideMenu() {
     return (
-      <div className="bg-green-900 absolute flex flex-col left-16 top-16">
-        <ul>
+      <div className="bg-green-900 absolute w-2/6 px-8 left-16 top-16">
+        <ul className="flex flex-col gap-x-1.5">
           <li className="menu-list-item py-2 hover:bg-slate-50"><a href="/">Inicio</a></li>
           <li className="menu-list-item py-2 hover:bg-slate-50"><a href="#">Quienes somos</a></li>
           <li className="menu-list-item py-2 hover:bg-slate-50"><a href="#">Productos</a></li>
