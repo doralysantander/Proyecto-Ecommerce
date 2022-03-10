@@ -3,9 +3,9 @@ import React from 'react'
 const ProductItem = ({data,addToCart}) => {
   //desestructurar
   let {id, description,price,image }= data;
-console.log({data})
+//console.log({data})
   return (
-    <div>
+    <div className="border border-lime-800">
        <img
         src={image}
         alt="sds"
@@ -14,15 +14,9 @@ console.log({data})
       <p>{description}</p>
       <span>valor: ${price} Libra</span>
       <div>
-      <button
-            type="button"
-            className="bg-green-900 px-2 py-2 rounded-md text-zinc-100 font-bold"
-            onClick={() => addToCart(id)}
-          >
-            </button>
+      <button className="bg-green-900 px-2 py-2 rounded-md text-zinc-100 font-bold" onClick={()=>addToCart(id)}>AGREGAR</button>
       </div>
-
-    Producto
+  
     </div>
   )
 }

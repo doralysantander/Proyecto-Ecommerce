@@ -22,7 +22,6 @@ function App() {
     <Navbar/>
     <Routes>
      <Route path="/" element={<Landing/>}/>
-
       <Route path="/carrusel" element={<Carrusel/>}/>
       <Route path="/productos" element={<Products/>}/>
       <Route path="/lista-productos" element={<ShoppingCart/>}/>
@@ -35,30 +34,3 @@ function App() {
   );
 }
 export default App;
-/*<>
-    <BrowserRouter>
-    <Routes>
-      <Route path="/" element={<Navbar/>}/>
-    </Routes>
-    </BrowserRouter>
-  
-  <Navbar />
-  <Carrusel/>
-  <Products />
-  <Productslist />
-  <Footer />
-    </>
-    
-     <BrowserRouter>
-    <Routes>
-      <Route path="/" element={<Navbar/>}/>
-      <Route path="/" element={<Carrusel/>}/>
-      <Route path="/" element={<Products/>}/>
-      <Route path="/" element={<Productslist/>}/>
-      <Route path="/" element={<Footer/>}/>
-    </Routes>
-    </BrowserRouter>
-    
-    
-    <Route path="/" element={<Landing/>}/>
-    */

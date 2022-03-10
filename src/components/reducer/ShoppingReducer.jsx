@@ -123,22 +123,65 @@ cart:[],
 export function  shoppingReducer(state,action){
     switch (action.type){
         case TYPES.ADD_TO_CART:{
+            //busque por productid
+            let newItem = state.products.find(product => product.id === action.payload
+                )
+            //console.log(newItem)
+            //si el item es igual a que ya hemos agregado
+            let itemInCart = state.cart.find(item =>item.id===newItem.id)
+            
+            return itemInCart 
+            ? {
+                ...state,
+                cart:state.cart.map((item) =>
+                item.id === newItem.id 
+                ? {...item,quantity:item.quantity +1}
+                :item),
+            }
+
+            :{//nulo
+                ...state,//copia estado actual carro
+                cart:[...state.cart,{...newItem,quantity:1}],//copia + nuevo elemento
+            }
+            
+                //copia del carro compras
+            
+                //copia y agrega el nuevo estado
+
+            
 
         }
         case TYPES.REMOVE_ONE_FROM_CART:{
-    
-            }
-
+            let itemToDelete = state.cart.find((item) => item.id === action.payload)
+            //restarle de uno en uno
+            return itemToDelete.quantity > 1
+            ? {
+                ...state,
+                cart: state.cart.map((item) =>
+                  item.id === action.payload
+                    ? { ...item, quantity: item.quantity - 1 }
+                    : item
+                ),
+              }
+        
+            : {
+                ...state,
+                cart: state.cart.filter((item) => item.id !== action.payload),
+              };
+        }
             case TYPES.REMOVE_ONE_FROM_CART:{
     
             }
-            case TYPES.REMOVE_ALL_FROM_CART:{
-    
-            }
+            case TYPES.REMOVE_ALL_FROM_CART: {
+                return {
+                  ...state,
+                  cart: state.cart.filter((item) => item.id !== action.payload),
+                };
+              }
 
-            case TYPES.CLEAR_CART:{
-    
-            }
+            case TYPES.CLEAR_CART:
+                return shoppinginitialState;
+            
             default:
                 return state;
         
