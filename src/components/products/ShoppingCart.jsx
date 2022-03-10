@@ -25,6 +25,7 @@ const ShoppingCart = () => {
 
     const clearCart = () =>{
       dispatch({type:TYPES.CLEAR_CART})
+     
     }
 
   return (
@@ -37,16 +38,17 @@ const ShoppingCart = () => {
           ))}
         </div>
       
-        <div className="absolute w-2/3 h-auto top-10 bg-green-600 md:w-1/4 h-auto  lg:w-1/4 h-auto top-40 right-10"> 
-        <div className=" flex-col justify-center items-center">
-        <button className="bg-green-900 px-2 py-2 rounded-md text-zinc-100 font-bold" onClick={clearCart}>Limpiar</button>
+        <div className="absolute w-2/3 h-auto top-10 bg-neutral-300 md:w-1/4 h-auto  lg:w-1/4 h-auto top-40 right-10"> 
+        <div className="flex  flex-col justify-center">
+        
          
-         
+
          {/*arreglo que trae los items del carro */} 
         {cart.map((item,index)=> (
         <CartItem key={index} data={item} delFromCart={delFromCart}/>
             ))
           }
+          <button className="bg-green-900 px-2 py-2 rounded-md  text-zinc-100 font-bold" onClick={clearCart}>Limpiar carrito</button>
         </div>
         </div>
         
@@ -55,3 +57,4 @@ const ShoppingCart = () => {
 }
 
 export default ShoppingCart
+

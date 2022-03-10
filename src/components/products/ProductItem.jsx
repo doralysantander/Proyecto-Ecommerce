@@ -5,7 +5,7 @@ const ProductItem = ({data,addToCart}) => {
   let {id, description,price,image }= data;
 //console.log({data})
   return (
-    <div className="border border-lime-800">
+    <div className="border flex flex-col justify-center items-center border-lime-800">
        <img
         src={image}
         alt="sds"
