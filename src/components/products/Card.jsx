@@ -24,8 +24,7 @@ const Card = ({ product, cart, setCart, products }) => {
     setCount(summ)
     //const rest =() =>setCount(count - 1)
     }*/
-    
-
+  
 
  
   return (

@@ -4,12 +4,13 @@ import Carrusel from '../components/carrusel/Carrusel'
 import Products from '../components/products/Products';
 //import Productslist from '../components/products/Productslist';
 import ShoppingCart from '../components/products/ShoppingCart'
+//import Navbar from '../components/navbar/Navbar';
 
 
 const Landing = () => {
   return (
     <div>
-
+       
             <Carrusel/>
             <Products/>
             <ShoppingCart/>

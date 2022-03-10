@@ -2,12 +2,13 @@ import React, { useState } from 'react'
 import logo from '../../assets/logo/logo.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars, faCartPlus } from '@fortawesome/free-solid-svg-icons'
-import Card from '../products/Card'
+//import Card from '../products/Card'
 import { NavLink } from 'react-router-dom'
 //import Card from '../products/Card'
 
 export default function Navbar () {
 const [open, setOpen] = useState(false)
+console.log(open)
 //const [opencar, setOpencar] = useState(false)
 
 return (
@@ -25,7 +26,6 @@ className="sm:w-14 h-14 md:w-1/4 h-1/4 xl:w-36 h-36"
 
 <FontAwesomeIcon icon={faCartPlus} className="text-stone-50 h-8 w-8 md:h-16 w-16" 
 onClick={() =>(setOpen(!open))} />{/*icono carro compras */}
-{open ?<Card/>:''}
 </div>
 
 </>
@@ -40,13 +40,16 @@ function slideMenu() {
           <li className="menu-list-item py-2 hover:bg-slate-50"><NavLink to="#">Productos</NavLink></li>
           <li className="menu-list-item py-2 hover:bg-slate-50"><NavLink to="#">Contacto</NavLink></li>
           </ul>
-
-  
       </div>
+
     )
+    
   }
 
 /*
   onClick={() =>
     (setOpencar(!opencar))}
-    {opencar ? <Card/>:''}*/
+    {opencar ? <Card/>:''}
+    {open ?<Card/>:''}
+    
+    */

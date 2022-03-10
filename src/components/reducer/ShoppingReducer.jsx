@@ -34,7 +34,7 @@ category:"cat-apple"
 id: 2,
 description: "Manzana orgánica del huerto a su mesa",
 image: trayapple3,
-price: 5.000,
+price: 5000,
 category:"cat-apple"
 },
 
@@ -138,18 +138,10 @@ export function  shoppingReducer(state,action){
                 ? {...item,quantity:item.quantity +1}
                 :item),
             }
-
             :{//nulo
                 ...state,//copia estado actual carro
                 cart:[...state.cart,{...newItem,quantity:1}],//copia + nuevo elemento
             }
-            
-                //copia del carro compras
-            
-                //copia y agrega el nuevo estado
-
-            
-
         }
         case TYPES.REMOVE_ONE_FROM_CART:{
             let itemToDelete = state.cart.find((item) => item.id === action.payload)

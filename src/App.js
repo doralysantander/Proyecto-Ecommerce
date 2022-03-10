@@ -7,9 +7,7 @@ import Carrusel from './components/carrusel/Carrusel';
 import Products from './components/products/Products';
 //import Productslist from './components/products/Productslist';
 import Landing from './pages/Landing'
-
 //import Apple from './components/products/Apple';
-
 //import Carousel from 'react-elastic-carousel';
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import ShoppingCart from './components/products/ShoppingCart';

@@ -2,7 +2,7 @@ import React from 'react'
 
 const CartItem = ({data,delFromCart}) => {//destrucuture
   let {id, description,price,image,quantity, }= data;
-  console.log(price)
+  //console.log(price)
   
   return (
     <div className="border border-lime-800">
@@ -17,8 +17,6 @@ const CartItem = ({data,delFromCart}) => {//destrucuture
       <button className="bg-green-900 px-2 py-2 rounded-md text-zinc-100 font-bold" onClick={()=>delFromCart(id)}>Eliminar uno</button>
       <button className="bg-green-900 px-2 py-2 rounded-md text-zinc-100 font-bold" onClick={()=>delFromCart(id,true)}>Eliminar Todos</button>
       </div>
-
-    Producto
   
 
     </div>
