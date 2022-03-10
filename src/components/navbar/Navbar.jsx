@@ -8,8 +8,8 @@ import { NavLink } from 'react-router-dom'
 
 export default function Navbar () {
 const [open, setOpen] = useState(false)
-console.log(open)
-//const [opencar, setOpencar] = useState(false)
+//console.log(open)
+const [opencar, setOpencar] = useState(false)
 
 return (
 <>
@@ -21,24 +21,22 @@ onClick={() =>(setOpen(!open))}
 <img
 src={logo}
 alt="logo"
-className="sm:w-14 h-14 md:w-1/4 h-1/4 xl:w-36 h-36"
+className="sm:w-20 h-20 md:w-1/4 h-1/4 xl:w-36 h-36"
 />
-
 <FontAwesomeIcon icon={faCartPlus} className="text-stone-50 h-8 w-8 md:h-16 w-16" 
-onClick={() =>(setOpen(!open))} />{/*icono carro compras */}
+onClick={() =>(setOpencar(!opencar))} />{/*icono carro compras */}
 </div>
-
 </>
 )
 }
 function slideMenu() {
     return (
-      <div className="bg-green-900 absolute w-2/6 px-8 left-16 top-16">
-        <ul className="flex flex-col gap-x-1.5">
-          <li className="menu-list-item py-2 hover:bg-slate-50"><NavLink to="/">Inicio</NavLink></li>
-          <li className="menu-list-item py-2 hover:bg-slate-50"><NavLink to="#">Quienes somos</NavLink></li>
-          <li className="menu-list-item py-2 hover:bg-slate-50"><NavLink to="#">Productos</NavLink></li>
-          <li className="menu-list-item py-2 hover:bg-slate-50"><NavLink to="#">Contacto</NavLink></li>
+      <div className="bg-green-900 px-10 py-10 h-screen absolute w-3/6 top-22 sm:top-32  xl:w-1/6  left-0 top-28 ">
+        <ul className="flex flex-col gap-8">
+          <li className="menu-list-item py-2 text-sm text-slate-100"><NavLink to="/">Inicio</NavLink></li>
+          <li className="menu-list-item py-2 text-slate-100"><NavLink to="#">Quienes somos</NavLink></li>
+          <li className="menu-list-item py-2 text-slate-100"><NavLink to="#">Productos</NavLink></li>
+          <li className="menu-list-item py-2 text-slate-100"><NavLink to="#">Contacto</NavLink></li>
           </ul>
       </div>
 
@@ -51,5 +49,5 @@ function slideMenu() {
     (setOpencar(!opencar))}
     {opencar ? <Card/>:''}
     {open ?<Card/>:''}
-    
+    text-slate-100
     */
