@@ -2,13 +2,13 @@ import React, { useState } from 'react'
 import logo from '../../assets/logo/logo.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars, faCartPlus } from '@fortawesome/free-solid-svg-icons'
+import Card from '../products/Card'
 import { NavLink } from 'react-router-dom'
 //import Card from '../products/Card'
 
 export default function Navbar () {
 const [open, setOpen] = useState(false)
 //const [opencar, setOpencar] = useState(false)
-
 
 return (
 <>
@@ -20,14 +20,12 @@ onClick={() =>(setOpen(!open))}
 <img
 src={logo}
 alt="logo"
-className="sm:w-24 h-24 md:w-1/4 h-1/4 xl:w-1/6 h-1/6"
+className="sm:w-14 h-14 md:w-1/4 h-1/4 xl:w-36 h-36"
 />
 
-<FontAwesomeIcon icon={faCartPlus} className="text-stone-50 h-8 w-8 md:h-16 w-16" />{/*icono carro compras */}
-
-
-
-
+<FontAwesomeIcon icon={faCartPlus} className="text-stone-50 h-8 w-8 md:h-16 w-16" 
+onClick={() =>(setOpen(!open))} />{/*icono carro compras */}
+{open ?<Card/>:''}
 </div>
 
 </>
@@ -37,10 +35,10 @@ function slideMenu() {
     return (
       <div className="bg-green-900 absolute w-2/6 px-8 left-16 top-16">
         <ul className="flex flex-col gap-x-1.5">
-          <li className="menu-list-item py-2 hover:bg-slate-50"><a href="/">Inicio</a></li>
-          <li className="menu-list-item py-2 hover:bg-slate-50"><a href="#">Quienes somos</a></li>
-          <li className="menu-list-item py-2 hover:bg-slate-50"><a href="#">Productos</a></li>
-          <li className="menu-list-item py-2 hover:bg-slate-50"><a href="#">Contacto</a></li>
+          <li className="menu-list-item py-2 hover:bg-slate-50"><NavLink to="/">Inicio</NavLink></li>
+          <li className="menu-list-item py-2 hover:bg-slate-50"><NavLink to="#">Quienes somos</NavLink></li>
+          <li className="menu-list-item py-2 hover:bg-slate-50"><NavLink to="#">Productos</NavLink></li>
+          <li className="menu-list-item py-2 hover:bg-slate-50"><NavLink to="#">Contacto</NavLink></li>
           </ul>
 
   

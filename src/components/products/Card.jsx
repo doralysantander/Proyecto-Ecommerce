@@ -8,10 +8,9 @@ const Card = ({ product, cart, setCart, products }) => {
   const addProduct = (id) => {
     //filtrar cada producto id selecciono === al que estoy filtrando
     const product = products.filter((product) => product.id === id);
-
     setCart([...cart, ...product]); //modificar el estado cart agrega abajo de la que esta cargada
   };
-
+  
   const delProduct = (id) => {
     //FILTRAR LO que eat dentro del carro
     //todos los productos - el que presione clic en eliminar
@@ -19,6 +18,16 @@ const Card = ({ product, cart, setCart, products }) => {
     setCart(products);//modificar esl estado car
     console.log(products)
   };
+
+  /*const Count =() => {
+    const summ =() =>setCount(count +1)
+    setCount(summ)
+    //const rest =() =>setCount(count - 1)
+    }*/
+    
+
+
+ 
   return (
     <div>
       <img
@@ -32,7 +41,9 @@ const Card = ({ product, cart, setCart, products }) => {
       {products ? (
 
         <div className="flex gap-y-1 gap-x-1">
-          <button className="bg-green-900 px-1.5 py-1.5 w-8 h-8 text-center rounded-2xl text-zinc-100 font-bold">
+          <button className="bg-green-900 px-1.5 py-1.5 w-8 h-8 text-center rounded-2xl text-zinc-100 font-bold"
+           //onClick={() => Count()}
+          >
             +
           </button>
           <input
@@ -101,6 +112,10 @@ const Card = ({ product, cart, setCart, products }) => {
         
 
     </div>
+
+
+
+    
 }*/
 
 export default Card;

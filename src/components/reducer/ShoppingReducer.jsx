@@ -1,7 +1,6 @@
+import React from "react";
 
-import React, { Fragment, useState } from 'react'
-import Card from "./Card";
-import Cart from "./Cart";
+import {TYPES} from '../actions/ShoppingAction'
 //Apples
 //import trayapple1 from '../../assets/products/apples/thre-apples.png' 
 import trayapple2 from '../../assets/products/apples/six-apples.png'
@@ -18,10 +17,9 @@ import trayfeijoas3 from '../../assets/products/feijoas/nine-feijoas.png'
 import trayfeijoas4 from '../../assets/products/feijoas/six-feijoas.png'
 import trayfeijoas5 from '../../assets/products/feijoas/four-feijoas.png'
 
-const Productslist = () => {
-  //export const shoopingInitialEstate={[], cart[]}
+export const shoppinginitialState =  {
 
-const[products, setProducts]= useState([
+products:[
 
 {
 id: 1,
@@ -117,8 +115,40 @@ description: "Feijoa orgánica de alta calidad",
 image: trayfeijoas5,
 price: 5000,
 category:"cat-feijoa"
+},
+],
+cart:[],
 }
-])
+
+export function  shoppingReducer(state,action){
+    switch (action.type){
+        case TYPES.ADD_TO_CART:{
+
+        }
+        case TYPES.REMOVE_ONE_FROM_CART:{
+    
+            }
+
+            case TYPES.REMOVE_ONE_FROM_CART:{
+    
+            }
+            case TYPES.REMOVE_ALL_FROM_CART:{
+    
+            }
+
+            case TYPES.CLEAR_CART:{
+    
+            }
+            default:
+                return state;
+        
+        
+    }
+    
+       
+    
+}
+/*
 const [cart, setCart] = useState([])
 //const [count, setCount]= useState(1)
 //const [categor, setCategor]= useState("")
@@ -133,40 +163,17 @@ key= {product.id}
 product={product} //devuleve cada producto
 cart={cart} 
 setCart={setCart} //Estado carro 
-products={products}>{/*listado de productos */}
+products={products}>
 
 
-{/*count={count}
-  setCount={setCount}*/}
+
 
 </Card>))
 };
-{/*pasar props del padre a cart */}
+
 <Cart  setCart={setCart} cart={cart}/>
 </div>
 </Fragment>
 )
-}
-
-export default Productslist
-/*export default Productslist
-
-export function shoppingReducer(state, action) {
-  switch (action.type) {
-    case TYPES.ADD_TO_CART: {
-
-    }
-    case TYPES.REMOVE_ONE_FROM_CART: {
-
-    }
-    case TYPES.REMOVE_ALL_FROM_CART: {
-
-    }
-    case TYPES.CLEAR_CART: {
-
-    }
-    default:
-      return state;
-
-  }
 }*/
+

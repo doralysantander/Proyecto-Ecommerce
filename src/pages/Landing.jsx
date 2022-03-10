@@ -2,7 +2,8 @@ import React from 'react'
 //import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import Carrusel from '../components/carrusel/Carrusel'
 import Products from '../components/products/Products';
-import Productslist from '../components/products/Productslist';
+//import Productslist from '../components/products/Productslist';
+import ShoppingCart from '../components/products/ShoppingCart'
 
 
 const Landing = () => {
@@ -11,7 +12,7 @@ const Landing = () => {
 
             <Carrusel/>
             <Products/>
-            <Productslist/>
+            <ShoppingCart/>
 
 
     </div>
@@ -19,16 +20,3 @@ const Landing = () => {
 }
 
 export default Landing
-/*<Route path="/" element={<Carrusel/>}/>*/
-/*
-
- <div>
-         <BrowserRouter>
-         <Routes>
-            <Carrusel/>
-            <Products/>
-            <Productslist/>
-        </Routes>
-        </BrowserRouter>
-
-    </div>*/
