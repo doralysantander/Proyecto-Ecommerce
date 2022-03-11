@@ -4,10 +4,14 @@ import React from 'react';
 import Navbar from './components/navbar/Navbar';
 import Footer from './components/footer/Footer';
 import Carrusel from './components/carrusel/Carrusel';
-import Category from './components/products/Category'
-import Products from './components/products/Products'
-import Landing from './pages/Landing'
-import Cart from './components/cart/Cart'
+import Category from './components/products/Category';
+import Products from './components/products/Products';
+import Landing from './pages/Landing';
+import Cart from './components/cart/Cart';
+//import Products from '../components/products/Products';
+//import Cart from '../components/cart/Cart';
+import {CartProvider} from './context/CartContext'
+
 
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
 
@@ -17,6 +21,7 @@ function App() {
     <>
 
     <BrowserRouter>
+    
     <Navbar/>
     <Routes>
 
@@ -27,10 +32,15 @@ function App() {
       <Route path="/carrito" element={<Cart/>}/>
       <Route path="/lista-productos" element={<Products/>}/>
       <Route path="*" element={<div>404 Not Found!</div>}/>
-       
     </Routes>
-    <Footer/>
+  
+    <CartProvider>
+            <Cart/>
+            <Products/>
+            </CartProvider>
+            <Footer/>
     </BrowserRouter>
+    /{/*aqui tambien puedo pasar */}
     </>
   );
 }
