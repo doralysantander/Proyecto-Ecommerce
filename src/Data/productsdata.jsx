@@ -19,6 +19,7 @@ export const ProductsData = [
     description: "Manzana orgánica del huerto a su mesa",
     image: trayapple2,
     price: 5000,
+    amount: 0,
     category:"cat-apple"
     
     },
@@ -28,6 +29,7 @@ export const ProductsData = [
     description: "Manzana orgánica del huerto a su mesa",
     image: trayapple3,
     price: 5000,
+    amount: 0,
     category:"cat-apple"
     },
     
@@ -36,6 +38,7 @@ export const ProductsData = [
     description: "Manzana orgánica del huerto a su mesa",
     image: trayapple4,
     price: 5000,
+    amount: 0,
     category:"cat-apple"
     },
     
@@ -44,6 +47,7 @@ export const ProductsData = [
     description: "Manzana orgánica del huerto a su mesa",
     image: trayapple5,
     price: 5000,
+    amount: 0,
     category:"cat-apple"
     },
     
@@ -52,6 +56,7 @@ export const ProductsData = [
     description: "Manzana orgánica del huerto a su mesa",
     image: trayapple6,
     price: 5000,
+    amount: 0,
     category:"cat-apple"
     },
     {
@@ -59,6 +64,7 @@ export const ProductsData = [
     description: "Manzana orgánica del huerto a su mesa",
     image: trayapple7,
     price: 5000,
+    amount: 0,
     category:"car-apple"
     },
     
@@ -67,6 +73,7 @@ export const ProductsData = [
     description: "Feijoa orgánica de alta calidad",
     image: trayfeijoas1,
     price: 5000,
+    amount: 0,
     category:"cat-feijoa"
     },
     
@@ -75,6 +82,7 @@ export const ProductsData = [
     description: "Feijoa orgánica de alta calidad",
     image: trayfeijoas2,
     price: 5000,
+    amount: 0,
     category:"cat-feijoa"
     },
     
@@ -83,6 +91,7 @@ export const ProductsData = [
     description: "Feijoa orgánica de alta calidad",
     image: trayfeijoas3,
     price: 5000,
+    amount: 0,
     category:"cat-feijoa"
     },
     
@@ -91,6 +100,7 @@ export const ProductsData = [
     description: "Feijoa orgánica de alta calidad",
     image: trayfeijoas4,
     price: 5000,
+    amount: 0,
     category:"cat-feijoa"
     },
     
@@ -99,6 +109,7 @@ export const ProductsData = [
     description: "Feijoa orgánica de alta calidad",
     image: trayfeijoas4,
     price: 5000,
+    amount: 0,
     category:"cat-feijoa"
     },
     
@@ -107,6 +118,7 @@ export const ProductsData = [
     description: "Feijoa orgánica de alta calidad",
     image: trayfeijoas5,
     price: 5000,
+    amount: 0,
     category:"cat-feijoa"
 },
 ];

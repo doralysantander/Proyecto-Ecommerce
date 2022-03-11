@@ -1,7 +1,6 @@
 import { useContext, useEffect, useState } from "react";
-//import { ItemCart } from "../ItemCart/ItemCart";
 import CartContext from "../../context/CartContext";
-import ItemCart from "../ItemCart/ItemCart";
+import { ItemCart } from "../ItemCart/ItemCart";
 
 
 const Cart = () => {
@@ -75,20 +74,20 @@ const Cart = () => {
       </div>
 
       {cartItems && cartOpen && (
-        <div className="">
-          <h2>Tu carrito</h2>
+        <div className="absolute mt-10 mr-20 rounded-3xl bg-green-900 w-96 text-stone-100">
+          <h2 className="text-center font-medium mt-34" >Tu carrito</h2>
 
           {cartItems.length === 0 ? (
-            <p className="">Tu carrito esta vacio</p>
+            <p className="text-center font-medium mt-4 text-sm">Tu carrito esta vacio</p>
           ) : (
-            <div className="">
+            <div className="max-h-52 overflow-y-scroll mt-6">
               {cartItems.map((item, i) => (
-                <ItemCart key={i} item={item} />
+              <ItemCart key={i} item={item}/>
               ))}
             </div>
           )}
 
-          <h2 className="">Total: ${total}</h2>
+          <h2 className="text-center font-medium mt-14 pb-34">Total: ${total}</h2>
         </div>
       )}
     </div>
@@ -96,6 +95,6 @@ const Cart = () => {
 };
 
 export default Cart;
-   
+   /* <ItemCart key={i} item={item}/> */
 
 

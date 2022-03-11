@@ -7,9 +7,7 @@ import Carrusel from './components/carrusel/Carrusel';
 import Category from './components/products/Category';
 import Products from './components/products/Products';
 import Landing from './pages/Landing';
-import Cart from './components/cart/Cart';
-//import Products from '../components/products/Products';
-//import Cart from '../components/cart/Cart';
+import Cart from './components/Cart/Cart';
 import {CartProvider} from './context/CartContext'
 
 
