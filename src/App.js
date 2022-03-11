@@ -17,13 +17,9 @@ import {BrowserRouter, Routes, Route} from 'react-router-dom';
 function App() {
   return (
     <>
-
+ <Navbar/>
     <BrowserRouter>
-    
-    <Navbar/>
     <Routes>
-
-
      <Route path="/" element={<Landing/>}/>
       <Route path="/carrusel" element={<Carrusel/>}/>
       <Route path="/productos" element={<Category/>}/>
@@ -31,14 +27,16 @@ function App() {
       <Route path="/lista-productos" element={<Products/>}/>
       <Route path="*" element={<div>404 Not Found!</div>}/>
     </Routes>
-  
     <CartProvider>
+   
             <Cart/>
             <Products/>
     </CartProvider>
-            <Footer/>
+   
+    <Footer/>
     </BrowserRouter>
-    /{/*aqui tambien puedo pasar */}
+
+    {/*aqui tambien puedo pasar */}
     </>
   );
 }
@@ -47,6 +45,12 @@ export default App;
 <Route path="/lista-productos" element={<ShoppingCart/>}/>
  <Navbar/>
     <Routes>
+
+
+    <CartProvider>
+            <Cart/>
+            <Products/>
+    </CartProvider>
 
 
 */

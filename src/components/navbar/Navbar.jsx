@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import logo from '../../assets/logo/logo.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars, faCartPlus } from '@fortawesome/free-solid-svg-icons'
-//import Card from '../products/Card'
 import { NavLink } from 'react-router-dom'
 //import Card from '../products/Card'
 

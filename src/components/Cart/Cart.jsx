@@ -26,15 +26,16 @@ const Cart = () => {
   );
 
   return (
-    <div className="w-screen h-12 flex justify-end">
+    <div className="w-full h-full flex items-start justify-end ">
       <div
         onClick={() => setCartOpen(!cartOpen)}
-        className="absolute mt-10 mr-2 cursor-pointer0 z-70"
+        className="absolute mt-2.5 mr-5 cursor-pointer0 z-70"
       >
-        <div className="w-14 h-14 bg-slate-500 flex items-center justify-center">
+        {/*cuadrito del carro */}
+        <div className="w-16 h-16 bg-green-900 flex items-center justify-center rounded-full">
           {!cartOpen ? (
             <svg
-              className="h-8 mr-0 rounded-full"
+              className="h-8 mr-0.5 "
               width={"45px"}
               viewBox="0 0 30 27"
               fill="none"
@@ -55,6 +56,7 @@ const Cart = () => {
             </svg>
           ) : (
             <svg
+            className="h-8 mr-0.5"
               width="20"
               height="20"
               viewBox="0 0 20 20"
@@ -69,7 +71,7 @@ const Cart = () => {
           )}
         </div>
         {!cartOpen && (
-          <div className="w-5 h-5 rounded-full absolute top-0 right-10 bg-red-800 text-xs text-stone-100 flex align-center justify-center">{productsLength}</div>
+          <div className="w-5 h-5 rounded-full absolute top-0 right-0 bg-yellow-600 font-semibold text-xs text-slate-100 flex items-center justify-center">{productsLength}</div>
         )}
       </div>
 
@@ -78,7 +80,7 @@ const Cart = () => {
           <h2 className="text-center font-medium mt-34" >Tu carrito</h2>
 
           {cartItems.length === 0 ? (
-            <p className="text-center font-medium mt-4 text-sm">Tu carrito esta vacio</p>
+            <p className="text-center font-medium mt-1 text-sm">Tu carrito esta vacio</p>
           ) : (
             <div className="max-h-52 overflow-y-scroll mt-6">
               {cartItems.map((item, i) => (
@@ -95,6 +97,11 @@ const Cart = () => {
 };
 
 export default Cart;
-   /* <ItemCart key={i} item={item}/> */
+   /* <ItemCart key={i} item={item}/>
+   absolute top-100 
+
+    className="absolute mt-0 mr-3 cursor-pointer0 z-70"
+       <div className="w-screen h-12 flex justify-end">
+   */
 
 
