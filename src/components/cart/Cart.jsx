@@ -27,16 +27,16 @@ const Cart = () => {
   );
 
   return (
-    <div>
+    <div className="w-screen h-12 flex justify-end">
       <div
         onClick={() => setCartOpen(!cartOpen)}
-        className=""
+        className="absolute mt-10 mr-2 cursor-pointer0 z-70"
       >
-        <div className="">
+        <div className="w-14 h-14 bg-slate-500 flex items-center justify-center">
           {!cartOpen ? (
             <svg
-              className=""
-              width={"35px"}
+              className="h-8 mr-0 rounded-full"
+              width={"45px"}
               viewBox="0 0 30 27"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -70,7 +70,7 @@ const Cart = () => {
           )}
         </div>
         {!cartOpen && (
-          <div className="">{productsLength}</div>
+          <div className="w-5 h-5 rounded-full absolute top-0 right-10 bg-red-800 text-xs text-stone-100 flex align-center justify-center">{productsLength}</div>
         )}
       </div>
 
