@@ -14,7 +14,8 @@ const Landing = () => {
   return (
     <>     
             <Carrusel/>
-            <Category/>  
+            <Category/> 
+             
 
     </>
   )

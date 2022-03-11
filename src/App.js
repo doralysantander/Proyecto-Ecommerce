@@ -37,7 +37,7 @@ function App() {
     <CartProvider>
             <Cart/>
             <Products/>
-            </CartProvider>
+    </CartProvider>
             <Footer/>
     </BrowserRouter>
     /{/*aqui tambien puedo pasar */}
@@ -46,4 +46,9 @@ function App() {
 }
 export default App;
 /* import ShoppingCart from './components/products/ShoppingCart';
-<Route path="/lista-productos" element={<ShoppingCart/>}/> */
+<Route path="/lista-productos" element={<ShoppingCart/>}/>
+ <Navbar/>
+    <Routes>
+
+
+*/
