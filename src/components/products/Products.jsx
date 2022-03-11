@@ -1,34 +1,29 @@
 import React from 'react'
-import feijoa from '../../assets/products/feijoas/feijoalogo.png'
-import apple from '../../assets/products/apples/applelogo.png' 
 
+import {ProductsData} from '../../Data/productsdata'
 
-const Products = ( ) => {
-  //const { id, category} = product;
- 
-  /*const categories = (category) => {
-    //filtrar cada producto id selecciono === al que estoy filtrando
-    const product = products.filter((product) => product.category === category);
-    <Card ></Card>
-    setCart([...cart, ...product]); //modificar el estado cart agrega abajo de la que esta cargada
-  };*/
-
+const Products = () => {
   return (
-    <div className="w-screen flex h-1/5  justify-evenly">
-     <img 
-            src={apple}
-            alt="apple"
-            className=" w-32 h-32 sm:w-1/6 h-1/6 md:w-52 h-52 xl:w-52 h-52"
-          
-           
-        />
-      <img
-            src={feijoa}
-            alt="feijoa"
-            className="w-32 h-32 sm: w-1/6 h-1/6 md:w-52 h-52 xl:w-52 h-52"
-           
-        />
-       
+    <div>
+      {ProductsData.map((product,i)=>(
+        <div key={i}>
+
+       <img
+        src={product.image}
+        alt="fallo la carga"
+        className="w-3/6 h-3/6 overflow-hidden aspect-square"
+      />
+      <p>{product.description}</p>
+      <span>valor: ${product.price} Libra</span>
+      <div>
+      <button className="bg-green-900 px-2 py-2 rounded-md text-zinc-100 font-bold" onClick={()=>console.log(product)}>AGREGAR</button>
+      </div>
+
+          </div>
+
+      ))
+    }
+
     </div>
   )
 }

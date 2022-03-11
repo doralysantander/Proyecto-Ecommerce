@@ -4,13 +4,13 @@ import React from 'react';
 import Navbar from './components/navbar/Navbar';
 import Footer from './components/footer/Footer';
 import Carrusel from './components/carrusel/Carrusel';
-import Products from './components/products/Products';
-//import Productslist from './components/products/Productslist';
+import Category from './components/products/Category'
+import Products from './components/products/Products'
 import Landing from './pages/Landing'
-//import Apple from './components/products/Apple';
-//import Carousel from 'react-elastic-carousel';
+import Cart from './components/cart/Cart'
+
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
-import ShoppingCart from './components/products/ShoppingCart';
+
 
 function App() {
   return (
@@ -19,12 +19,15 @@ function App() {
     <BrowserRouter>
     <Navbar/>
     <Routes>
+
+
      <Route path="/" element={<Landing/>}/>
       <Route path="/carrusel" element={<Carrusel/>}/>
-      <Route path="/productos" element={<Products/>}/>
-      <Route path="/lista-productos" element={<ShoppingCart/>}/>
+      <Route path="/productos" element={<Category/>}/>
+      <Route path="/carrito" element={<Cart/>}/>
+      <Route path="/lista-productos" element={<Products/>}/>
       <Route path="*" element={<div>404 Not Found!</div>}/>
-  
+       
     </Routes>
     <Footer/>
     </BrowserRouter>
@@ -32,3 +35,5 @@ function App() {
   );
 }
 export default App;
+/* import ShoppingCart from './components/products/ShoppingCart';
+<Route path="/lista-productos" element={<ShoppingCart/>}/> */
