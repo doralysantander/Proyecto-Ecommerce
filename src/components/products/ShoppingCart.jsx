@@ -41,7 +41,7 @@ const ShoppingCart = () => {
         <div className="absolute w-2/3 h-auto top-10 bg-neutral-300 md:w-1/4 h-auto  lg:w-1/4 h-auto top-40 right-10"> 
         <div className="flex  flex-col justify-center">
         
-         
+
 
          {/*arreglo que trae los items del carro */} 
         {cart.map((item,index)=> (

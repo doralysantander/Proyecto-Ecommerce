@@ -12,6 +12,7 @@ import trayfeijoas2 from '../assets/products/feijoas/eleven-feijoas.png'
 import trayfeijoas3 from '../assets/products/feijoas/nine-feijoas.png'
 import trayfeijoas4 from '../assets/products/feijoas/six-feijoas.png'
 import trayfeijoas5 from '../assets/products/feijoas/four-feijoas.png'
+
 export const ProductsData = [
 {
     id: 1,

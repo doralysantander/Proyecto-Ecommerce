@@ -3,10 +3,11 @@ import React from 'react'
 import {ProductsData} from '../../Data/productsdata'
 
 const Products = () => {
-  return (
-    <div>
+  return (// aqui puedo colocar justyfy-items:center justify-content:center
+    <div div className="w-full h-5/6 gap-4 grid  justify-items-center justify-center sm:grid-cols-1  md:grid-cols-2 lg:grid-cols-3 rounded-lg">
+     
       {ProductsData.map((product,i)=>(
-        <div key={i}>
+        <div key={i} className=" w-full border flex flex-col justify-center items-center border-lime-800">
 
        <img
         src={product.image}
@@ -19,13 +20,16 @@ const Products = () => {
       <button className="bg-green-900 px-2 py-2 rounded-md text-zinc-100 font-bold" onClick={()=>console.log(product)}>AGREGAR</button>
       </div>
 
-          </div>
+      </div>
+          
 
       ))
     }
-
+    
     </div>
   )
 }
 
 export default Products
+/*
+<div className="border  flex flex-col justify-center items-center border-lime-800"> */
