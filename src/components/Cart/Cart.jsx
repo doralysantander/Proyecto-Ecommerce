@@ -31,7 +31,7 @@ const Cart = () => {
         onClick={() => setCartOpen(!cartOpen)}
         className="absolute mt-2.5 mr-5 cursor-pointer0 z-70"
       >
-        {/*cuadrito del carro */}
+        {/*circulo del carro */}
         <div className="w-16 h-16 bg-green-900 flex items-center justify-center rounded-full">
           {!cartOpen ? (
             <svg
@@ -76,7 +76,7 @@ const Cart = () => {
       </div>
 
       {cartItems && cartOpen && (
-        <div className="absolute mt-10 mr-20 rounded-3xl bg-green-900 w-96 text-stone-100">
+        <div className="absolute mt-10 mr-20 rounded-3xl bg-slate-400 text-stone-100 w-56 flex flex-col justify-center items-center sm:w-96 md:w-96 lg:w-96 ">
           <h2 className="text-center font-medium mt-34" >Tu carrito</h2>
 
           {cartItems.length === 0 ? (
@@ -102,6 +102,31 @@ export default Cart;
 
     className="absolute mt-0 mr-3 cursor-pointer0 z-70"
        <div className="w-screen h-12 flex justify-end">
+
+
+____________________________________________________________
+          {cartItems && cartOpen && (
+        <div className="absolute mt-10 mr-20 rounded-3xl bg-slate-400 w-96 text-stone-100">
+          <h2 className="text-center font-medium mt-34" >Tu carrito</h2>
+
+          {cartItems.length === 0 ? (
+            <p className="text-center font-medium mt-1 text-sm">Tu carrito esta vacio</p>
+          ) : (
+            <div className="max-h-52 overflow-y-scroll mt-6">
+              {cartItems.map((item, i) => (
+              <ItemCart key={i} item={item}/>
+              ))}
+            </div>
+          )}
+
+          <h2 className="text-center font-medium mt-14 pb-34">Total: ${total}</h2>
+        </div>
+      )}
+    </div>
+  );
+};
+
+export default Cart;
    */
 
 

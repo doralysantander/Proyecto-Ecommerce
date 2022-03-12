@@ -12,18 +12,20 @@ const [opencar, setOpencar] = useState(false)
 
 return (
 <>
-<div className="w-full p-3 bg-green-900 z-50 sticky top-0 flex justify-around items-center md:h-1/3 xl:h-1/3" >
-<FontAwesomeIcon icon={faBars} className="text-stone-50 h-8 w-8 md:h-16 w-16 " //icono menu hamburgesa
+<div className="w-full p-8 bg-green-900 z-30 sticky top-0 flex justify-around items-center md:h-1/3 xl:h-1/4" >
+<FontAwesomeIcon icon={faBars}  className="text-stone-50 h-6 w-6 sm:h-8 w-8 md:h-10 w-10 lg:h-14 w-14 " //icono menu hamburgesa
 onClick={() =>(setOpen(!open))} 
 />
 {open ? slideMenu():''}
 <img
 src={logo}
 alt="logo"
-className="sm:w-20 h-20 md:w-1/4 h-1/4 xl:w-36 h-36"
+className="h-14 w-14 sm:h-20 w-20 md:h-24 w-24 lg:h-28 w-28 xl:w-36 h-36 "
 />
-<FontAwesomeIcon icon={faCartPlus} className="text-stone-50 h-8 w-8 md:h-16 w-16" 
-onClick={() =>(setOpencar(!opencar))} />{/*icono carro compras */}
+<FontAwesomeIcon icon={faCartPlus} className="text-stone-50 h-6 w-6 sm:h-8 w-8 md:h-10 w-10 lg:h-14 w-14 " 
+onClick={() =>(setOpencar(!opencar))} />{/*carrito */}
+
+
 </div>
 </>
 )
@@ -49,4 +51,30 @@ function slideMenu() {
     {opencar ? <Card/>:''}
     {open ?<Card/>:''}
     text-slate-100
+
+    bg-green-900
+
+
+return (
+<>
+<div className="w-full p-3  bg-green-900 z-30 sticky top-0 flex justify-around items-center md:h-1/3 xl:h-1/4" >
+<FontAwesomeIcon icon={faBars} className="text-stone-50 h-8 w-8 md:h-16 w-16 " //icono menu hamburgesa
+onClick={() =>(setOpen(!open))} 
+/>
+{open ? slideMenu():''}
+<img
+src={logo}
+alt="logo"
+className="sm:w-20 h-20 md:w-1/4 h-1/4 xl:w-36 h-36"
+/>
+<FontAwesomeIcon icon={faCartPlus} className="text-stone-50 h-8 w-8 md:h-16 w-16" 
+onClick={() =>(setOpencar(!opencar))} />
+</div>
+</>
+)
+}
+
+
+
+
     */

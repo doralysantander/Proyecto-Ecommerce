@@ -9,16 +9,17 @@ import Products from './components/products/Products';
 import Landing from './pages/Landing';
 import Cart from './components/Cart/Cart';
 import {CartProvider} from './context/CartContext'
-
-
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
-
 
 function App() {
   return (
     <>
- <Navbar/>
+    
     <BrowserRouter>
+    <Navbar/>
+    
+    {/*<Navbar/>*/}
+  
     <Routes>
      <Route path="/" element={<Landing/>}/>
       <Route path="/carrusel" element={<Carrusel/>}/>
@@ -28,11 +29,9 @@ function App() {
       <Route path="*" element={<div>404 Not Found!</div>}/>
     </Routes>
     <CartProvider>
-   
-            <Cart/>
-            <Products/>
+    <Products/>
+    <Cart/>
     </CartProvider>
-   
     <Footer/>
     </BrowserRouter>
 
@@ -50,6 +49,11 @@ export default App;
     <CartProvider>
             <Cart/>
             <Products/>
+    </CartProvider>
+
+
+    <CartProvider>
+    <Cart/>
     </CartProvider>
 
 

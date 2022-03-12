@@ -8,28 +8,25 @@ export const ItemCart = ({ item }) => {
 
    /* Desestructuramos el item para sacar solo la id */
    const { id } = item;
-
   return (
-    <div className="border  flex flex-col justify-center items-center ">
+    <div className="w-80 h-80" >
+    <div className=" flex flex-col justify-center items-center">
+         
       <img
         src={item.image}
         alt="sss"
-        className="w-3/6 h-3/6 overflow-hidden aspect-square"
+        className="w-4/6 h-4/6 overflow-hidden aspect-square"
       />
-      <p>{item.description}</p>
+     {/*  <p>{item.description}</p>*/}
       <span>Cantidad: {item.amount}</span>
       <span>valor: ${item.price} Libra</span>
      
-      <div>
+      <div className =" flex gap-4">
         <button className="bg-green-900 px-2 py-2 rounded-md text-zinc-100 font-bold" onClick={() => AddItemToCart(item)}>Agregar</button>
         <button className="bg-green-900 px-2 py-2 rounded-md text-zinc-100 font-bold" onClick={() => DeleteItemToCart(id)}>Eliminar</button>
       </div>
-
-     
-      
-
+    </div>
     </div>
   )
 }
 
-/*<div> <p>Totaly: ${item.amount * item.price}</p></div> */
