@@ -76,7 +76,7 @@ const Cart = () => {
       </div>
 
       {cartItems && cartOpen && (
-        <div className="absolute mt-10 mr-20 rounded-3xl bg-slate-400 text-stone-100 w-56 flex flex-col justify-center items-center sm:w-96 md:w-96 lg:w-96 ">
+        <div className="absolute mt-10 mr-20 rounded-3xl bg-green-900 text-stone-100 w-56 flex flex-col justify-center items-center sm:w-96 md:w-96 lg:w-96 ">
           <h2 className="text-center font-medium mt-34" >Tu carrito</h2>
 
           {cartItems.length === 0 ? (

@@ -27,6 +27,7 @@ function App() {
       <Route path="/carrito" element={<Cart/>}/>
       <Route path="/lista-productos" element={<Products/>}/>
       <Route path="*" element={<div>404 Not Found!</div>}/>
+    
     </Routes>
     <CartProvider>
     <Products/>
@@ -43,7 +44,7 @@ export default App;
 /* import ShoppingCart from './components/products/ShoppingCart';
 <Route path="/lista-productos" element={<ShoppingCart/>}/>
  <Navbar/>
-    <Routes>
+    <Routeaas>
 
 
     <CartProvider>

@@ -7,6 +7,7 @@ import Category from '../components/products/Category';
 import Cart from '../components/Cart/Cart';
 import {CartProvider} from '../context/CartContext'
 import Products from'../components/products/Products';
+import About from '../components/about/About'
 
 
 const Landing = () => {
@@ -15,10 +16,11 @@ const Landing = () => {
     <>      
          
             <Carrusel/>
+            <About />
             <Category/> 
             <CartProvider>
-            <Cart/>
             <Products/>
+            <Cart/>
           </CartProvider>
              
 

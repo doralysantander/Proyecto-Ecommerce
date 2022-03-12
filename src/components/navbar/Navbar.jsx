@@ -5,6 +5,7 @@ import { faBars, faCartPlus } from '@fortawesome/free-solid-svg-icons'
 import { NavLink } from 'react-router-dom'
 //import Card from '../products/Card'
 
+
 export default function Navbar () {
 const [open, setOpen] = useState(false)
 //console.log(open)
@@ -22,8 +23,11 @@ src={logo}
 alt="logo"
 className="h-14 w-14 sm:h-20 w-20 md:h-24 w-24 lg:h-28 w-28 xl:w-36 h-36 "
 />
-<FontAwesomeIcon icon={faCartPlus} className="text-stone-50 h-6 w-6 sm:h-8 w-8 md:h-10 w-10 lg:h-14 w-14 " 
+{/*<FontAwesomeIcon icon={faCartPlus} className="text-stone-50 h-6 w-6 sm:h-8 w-8 md:h-10 w-10 lg:h-14 w-14 " 
 onClick={() =>(setOpencar(!opencar))} />{/*carrito */}
+
+
+
 
 
 </div>
