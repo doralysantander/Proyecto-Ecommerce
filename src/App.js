@@ -18,25 +18,24 @@ function App() {
     <BrowserRouter>
     <Navbar/>
     
-    {/*<Navbar/>*/}
+  
   
     <Routes>
      <Route path="/" element={<Landing/>}/>
       <Route path="/carrusel" element={<Carrusel/>}/>
       <Route path="/productos" element={<Category/>}/>
-      <Route path="/carrito" element={<Cart/>}/>
+      {/*<Route path="/carrito" element={<Cart/>}/>*/}
       <Route path="/lista-productos" element={<Products/>}/>
       <Route path="*" element={<div>404 Not Found!</div>}/>
     
     </Routes>
     <CartProvider>
     <Products/>
-    <Cart/>
     </CartProvider>
     <Footer/>
     </BrowserRouter>
 
-    {/*aqui tambien puedo pasar */}
+
     </>
   );
 }

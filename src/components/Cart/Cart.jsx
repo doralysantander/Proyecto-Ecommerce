@@ -26,7 +26,7 @@ const Cart = () => {
   );
 
   return (
-    <div className="w-full h-full flex items-start justify-end ">
+    <div>
       <div
         onClick={() => setCartOpen(!cartOpen)}
         className="absolute mt-2.5 mr-5 cursor-pointer0 z-70"
@@ -97,12 +97,8 @@ const Cart = () => {
 };
 
 export default Cart;
-   /* <ItemCart key={i} item={item}/>
-   absolute top-100 
-
-    className="absolute mt-0 mr-3 cursor-pointer0 z-70"
-       <div className="w-screen h-12 flex justify-end">
-
+   /* 
+<div className="w-full h-full flex items-start justify-end ">
 
 ____________________________________________________________
           {cartItems && cartOpen && (

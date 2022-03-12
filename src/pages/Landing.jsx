@@ -14,15 +14,13 @@ const Landing = () => {
   return (
 
     <>      
-         
             <Carrusel/>
             <About />
             <Category/> 
-            <CartProvider>
-            <Products/>
-            <Cart/>
-          </CartProvider>
-             
+             <CartProvider>
+               <Products/>
+            
+             </CartProvider>
 
     </>
   )
