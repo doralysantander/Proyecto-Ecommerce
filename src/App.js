@@ -25,15 +25,17 @@ function App() {
       <Route path="*" element={<div>404 Not Found!</div>}/>
     
     </Routes>
+    
+    </BrowserRouter>
+    
     <CartProvider>
     <Products/>
     <Cart/>
     </CartProvider>
     <Footer/>
-    </BrowserRouter>
-
-
+ 
     </>
+    
   );
 }
 export default App;
