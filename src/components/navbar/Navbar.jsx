@@ -1,11 +1,11 @@
 import React, { useState } from 'react'
 import logo from '../../assets/logo/logo.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBars, faCartPlus } from '@fortawesome/free-solid-svg-icons'
+import { faBars } from '@fortawesome/free-solid-svg-icons'
 import { NavLink } from 'react-router-dom'
-import {CartProvider} from '../../context/CartContext'
-import Cart from '../Cart/Cart'
-//import Card from '../products/Card'
+
+
+
 
 
 export default function Navbar () {

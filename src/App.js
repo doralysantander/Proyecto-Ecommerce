@@ -7,9 +7,10 @@ import Carrusel from './components/carrusel/Carrusel';
 import Category from './components/products/Category';
 import Products from './components/products/Products';
 import Landing from './pages/Landing';
-import Cart from './components/Cart/Cart';
-import {CartProvider} from './context/CartContext'
+import Cart from './Cart'
+import { CartProvider } from 'react-use-cart'
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
+import Home from './Home'
 
 function App() {
   return (
@@ -20,20 +21,18 @@ function App() {
      <Route path="/" element={<Landing/>}/>
       <Route path="/carrusel" element={<Carrusel/>}/>
       <Route path="/productos" element={<Category/>}/>
-      {/*<Route path="/carrito" element={<Cart/>}/>*/}
       <Route path="/lista-productos" element={<Products/>}/>
       <Route path="*" element={<div>404 Not Found!</div>}/>
     
     </Routes>
-    
-    </BrowserRouter>
-    
     <CartProvider>
-    <Products/>
+    <Home/>
     <Cart/>
     </CartProvider>
     <Footer/>
- 
+    </BrowserRouter>
+    
+    
     </>
     
   );
