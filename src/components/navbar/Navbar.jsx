@@ -11,26 +11,27 @@ import Cart from '../Cart/Cart'
 export default function Navbar () {
 const [open, setOpen] = useState(false)
 //console.log(open)
-const [opencar, setOpencar] = useState(false)
+
 
 return (
 <>
 <div className="w-full p-8 bg-green-900 z-30 sticky top-0 flex justify-around items-center md:h-1/3 xl:h-1/4" >
+
 <FontAwesomeIcon icon={faBars}  className="text-stone-50 h-6 w-6 sm:h-8 w-8 md:h-10 w-10 lg:h-14 w-14 " //icono menu hamburgesa
 onClick={() =>(setOpen(!open))} 
 />
 {open ? slideMenu():''}
+
 <img
 src={logo}
 alt="logo"
 className="h-14 w-14 sm:h-20 w-20 md:h-24 w-24 lg:h-28 w-28 xl:w-36 h-36 "
 />
-{/*<FontAwesomeIcon icon={faCartPlus} className="text-stone-50 h-6 w-6 sm:h-8 w-8 md:h-10 w-10 lg:h-14 w-14 " 
-onClick={() =>(setOpencar(!opencar))} />{/*carrito */}
 
-<CartProvider>
-  <Cart className=" text-stone-50 h-6 w-6 sm:h-8 w-8 md:h-10 w-10 lg:h-14 w-14 "/>
-</CartProvider>
+{/*<CartProvider className="text-stone-50 h-6 w-6 sm:h-8 w-8 md:h-10 w-10 lg:h-14 w-14">
+  <Cart className="text-stone-50 h-6 w-6 sm:h-8 w-8 md:h-10 w-10 lg:h-14 w-14"/>
+</CartProvider>*/}
+
 
 </div>
 </>
@@ -80,7 +81,8 @@ onClick={() =>(setOpencar(!opencar))} />
 )
 }
 
-
+{/*<FontAwesomeIcon icon={faCartPlus} className="text-stone-50 h-6 w-6 sm:h-8 w-8 md:h-10 w-10 lg:h-14 w-14 " 
+onClick={() =>(setOpencar(!opencar))} />
 
 
     */

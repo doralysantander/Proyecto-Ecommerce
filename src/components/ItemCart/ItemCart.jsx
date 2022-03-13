@@ -14,7 +14,7 @@ export const ItemCart = ({ item }) => {
          
       <img
         src={item.image}
-        alt="sss"
+        alt="carga incompleta"
         className="w-4/6 h-4/6 overflow-hidden aspect-square"
       />
      {/*  <p>{item.description}</p>*/}

@@ -2,7 +2,6 @@ import { useContext, useEffect, useState } from "react";
 import CartContext from "../../context/CartContext";
 import { ItemCart } from "../ItemCart/ItemCart";
 
-
 const Cart = () => {
   /* Creamos 2 estados, uno para ver si el carrito esta abierto o no 
   y otro para obtener la cantidad de productos que tenemos en el carrito */
@@ -26,7 +25,7 @@ const Cart = () => {
   );
 
   return (
-    <div>
+    <div className="w-full h-full flex items-start justify-end ">
       <div
         onClick={() => setCartOpen(!cartOpen)}
         className="absolute mt-2.5 mr-5 cursor-pointer0 z-70"
@@ -97,8 +96,12 @@ const Cart = () => {
 };
 
 export default Cart;
-   /* 
-<div className="w-full h-full flex items-start justify-end ">
+   /* <ItemCart key={i} item={item}/>
+   absolute top-100 
+
+    className="absolute mt-0 mr-3 cursor-pointer0 z-70"
+       <div className="w-screen h-12 flex justify-end">
+
 
 ____________________________________________________________
           {cartItems && cartOpen && (

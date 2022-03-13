@@ -14,12 +14,8 @@ import {BrowserRouter, Routes, Route} from 'react-router-dom';
 function App() {
   return (
     <>
-    
     <BrowserRouter>
     <Navbar/>
-    
-  
-  
     <Routes>
      <Route path="/" element={<Landing/>}/>
       <Route path="/carrusel" element={<Carrusel/>}/>
@@ -31,6 +27,7 @@ function App() {
     </Routes>
     <CartProvider>
     <Products/>
+    <Cart/>
     </CartProvider>
     <Footer/>
     </BrowserRouter>
